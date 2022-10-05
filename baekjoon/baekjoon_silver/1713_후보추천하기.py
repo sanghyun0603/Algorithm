@@ -13,7 +13,7 @@ for i in range(chu):
             chu_dict[chu_li[i]] = 1 # 없는 뉴페이스인경우 사진틀에 추가후 카운트증가
             cnt += 1
     else:                           # 사진틀이 꽉차버린 상황
-        if chu_li[i] in chu_dict:   # 꽉차버렸지만 사진틀에 있는 애가 나오면 +1
+        if chu_li[i] in chu_dict:   # 꽉차버렸지만 사진틀에 있는 애가 나오면 +1 O(1)
             chu_dict[chu_li[i]] +=1
         else:                       # 없는애가 나왔다. 그럼 최소값중 가장 오래된 사진이랑 바꿈
             keys = min(chu_dict,key=chu_dict.get) # 최소값찾는 과정-> 왼쪽부터 찾아서 자동으로 오래된사진이됨
