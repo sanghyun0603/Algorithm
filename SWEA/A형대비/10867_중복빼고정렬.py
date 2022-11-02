@@ -1,0 +1,6 @@
+N = int(input())
+N_li = list(map(int,input().split()))
+N_li = set(N_li)
+N_li = list(N_li)
+N_li.sort()
+print(*N_li)
